@@ -29,6 +29,9 @@ generate_theme_variants:
 
 install:
 	mkdir -p $(DESTDIR)$(PREFIX)/share/icons
+	for theme in $(THEMES); do \
+		rm -rf "$(DESTDIR)$(PREFIX)/share/icons/$$theme"; \
+	done
 	cp -R $(THEMES) $(DESTDIR)$(PREFIX)/share/icons
 
 	# skip building icon caches when packaging
