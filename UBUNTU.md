@@ -25,15 +25,23 @@ dangling symlinks (for example `jadx-gui.svg`).
 gsettings set org.gnome.desktop.interface icon-theme 'Flat-Remix-Red-Dark'
 ```
 
-## Pair with GNOME Shell theme
+## Pair with GNOME Shell + GTK
 
-See [flat-remix-gnome](https://github.com/shr00mie/flat-remix-gnome):
+- Shell: [flat-remix-gnome](https://github.com/shr00mie/flat-remix-gnome)
+- GTK: [flat-remix-gtk](https://github.com/shr00mie/flat-remix-gtk)
 
 ```bash
+# shell
 git clone https://github.com/shr00mie/flat-remix-gnome.git
 cd flat-remix-gnome
 ./install-user-themes.sh
 gsettings set org.gnome.shell.extensions.user-theme name 'Flat-Remix-Red-Dark-fullPanel'
+
+# gtk
+git clone https://github.com/shr00mie/flat-remix-gtk.git
+cd flat-remix-gtk
+./install-user-theme.sh Flat-Remix-GTK-Red-Darkest
+gsettings set org.gnome.desktop.interface gtk-theme 'Flat-Remix-GTK-Red-Darkest'
 ```
 
 Log out and back in after changing the shell theme on Wayland.
